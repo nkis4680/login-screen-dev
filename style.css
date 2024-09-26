@@ -1,0 +1,163 @@
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #4d5357;
+  padding: 40px;
+  width: 511px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-header h1 {
+  font-size: 35px;
+  line-height: 35px;
+  font-family: "berlingske_sans_roundregular";
+  margin: 30px 0px;
+}
+
+.login-header p {
+  margin: 5px 0 20px;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 15px 20px;
+  border: 2px solid #bed600;
+  background-color: #4d5357;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+  font-size: 20px;
+  line-height: 20px;
+}
+
+::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #fff;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+.remember-text {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "CalibriRegular";
+}
+.remember-me input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.custom-checkbox {
+  position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #4d5357;
+  border: 2px solid #bed600;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #bed600;
+}
+.login-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.login-form button {
+  padding: 15px 20px;
+  background-color: #bed600;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "CalibriRegular";
+}
+
+.login-links a {
+  color: #fff;
+  display: inline-block;
+}
+.login-details {
+  font-family: "CalibriRegular";
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+.login-copy {
+  font-size: 14.5px;
+  line-height: 16px;
+  font-family: "berlingske_sans_roundlight";
+}
+.login-mb-10 {
+  margin-bottom: 10px;
+}
+
+/****************************************************Font Face**************************************************************/
+@font-face {
+  font-family: "CalibriRegular";
+  src: url("./fonts/CalibriRegular.ttf") format("ttf"),
+    url("./fonts/CalibriRegular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "berlingske_sans_roundlight";
+  src: url("./fonts/berlingskesansround-lt-webfont.ttf") format("ttf"),
+    url("./fonts/berlingskesansround-lt-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "berlingske_sans_roundregular";
+  src: url("./fonts/berlingskesansround-rg-webfont.ttf") format("ttf"),
+    url("./fonts/berlingskesansround-rg-webfont.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "berlingske_sans_roundmedium";
+  src: url("./fonts/berlingskesansround-md-webfont.ttf") format("ttf"),
+    url("./fonts/berlingskesansround-md-webfont.woff2") format("woff2");
+  font-display: swap;
+}
