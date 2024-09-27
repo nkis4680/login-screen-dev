@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+/***instructions***/
+var refererUrl = document.referrer;
+$('#hidden-text-redirect-url').text(refererUrl);
+/***instructions***/
 
 function makePwdToggler(pwd){
    var checkbox = document.createElement('input');
