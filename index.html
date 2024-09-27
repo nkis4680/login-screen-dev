@@ -10,6 +10,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <style id="common">
+        /*****XD fonts*****/
+        @font-face {
+          font-family: "roobert_light";
+          src: url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-light.woff2") format('ttf'),
+          url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-light.woff2") format('woff2');
+          font-display: swap;
+        }
+        
+        @font-face {
+          font-family: "roobert_regular";
+          src: url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-regular.woff2") format('ttf'),
+          url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-regular.woff2")format('woff2');
+          font-display: swap;
+        }
+        
+        @font-face {
+          font-family: "roobert_medium";
+          src: url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-medium.woff2") format('ttf'),
+          url("https://devengage.altudo.net/-/media/themes/hoganlovells/site-theme-name/fonts/roobert-medium.woff2") format('woff2');
+          font-display: swap;
+        }
+        /*****XD fonts*****/
         @font-face {
             font-family: 'SegoeUI';
             src: url(https://login.microsoftonline.com/templates/src/fonts/segoeui.WOFF);
@@ -228,9 +250,9 @@ font-family: "berlingske_sans_roundregular"}.unified_container .row .panel-defau
         .unified_container .row .panel-default #api .localAccount .intro h2{
             font-size: 35px;
             line-height: 35px;
-            font-family: "berlingske_sans_roundregular";
+            font-family: "roobert_medium",sans-serif;
             margin: 30px 0px;
-            color: #fff;
+            color: #243508;
         }
         .unified_container .row .panel-default #api .localAccount .intro p{
             font-size: 35px;
@@ -449,25 +471,88 @@ font-family: "berlingske_sans_roundregular"}.unified_container .row .panel-defau
     </div>
     <div class="container  unified_container " role="presentation">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://devengage.altudo.net/-/media/project/english-site/home-page/images/hl-logo_rgb_76x76_final_svg.svg?h=76&iar=0&w=76&hash=BFC587DDDE313C00F9AC12F6D6DD7DBD" alt="Company Logo">
-                        <div id="api" role="main">
-                        </div>
-                    </div>
-                    <div class="login-area">
-                      <h1>Log in to Our thinking</h1>
-                    </div>
-                    <div class="login-footer">
-                        <div class="login-copy login-mb-10">For technical support, contact support@engage.hoganlovells.com
-                            <br>This site is
-                            best experienced in
-                            Chrome.</div>
-                        <div class="login-copy">© 2024 Hogan Lovells | Terms of use</div>
-                    </div>
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img class="companyLogo" data-tenant-branding-logo="true" src="https://devengage.altudo.net/-/media/project/english-site/home-page/images/hl-logo_rgb_76x76_final_svg.svg?h=76&amp;iar=0&amp;w=76&amp;hash=BFC587DDDE313C00F9AC12F6D6DD7DBD" alt="Company Logo">
+                    <div id="api" data-name="Unified" role="main">
+    <div class="claims-provider-list-buttons social" aria-label="Sign in with your social account" role="form">
+      <div class="intro">
+        <h2 aria-level="1">Sign in with your social account</h2>
+      </div>
+      <div class="options">
+          <div>
+              <button class="accountButton claims-provider-selection" id="AzureADExchangeWithAADtoken" role="link">Direct Access for Hogan Lovells</button>
+          </div>
+                  </div>
+    </div>
+
+    <div class="divider">
+      <h2>OR</h2>
+    </div>
+  <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="Login to Our thinking">
+    <div class="intro">
+      <h2 aria-level="1">
+        Login to Our thinking
+      </h2>
+    </div>
+    <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
+      <p></p>
+    </div>
+    <div class="entry">
+      <div class="entry-item">
+        <label for="signInName">
+          Your email
+        </label>
+        <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+          <p></p>
+        </div>
+        <input type="text" id="signInName" name="Your email" title="Please enter a valid Your email" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" placeholder="Your email" aria-label="Your email">
+      </div>
+        <div class="entry-item">
+          <div class="password-label">
+            <label for="password">Your password</label>
+                <a id="forgotPassword" href="/3d6eba18-c7b2-41e3-98f3-13e7e9b194a8/B2C_1A_signup_signin_Test/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPasswordExchange&amp;csrf_token=cGpNK0VDS0RoWjQrNzY3RzBmakdEbWh2eG1oNTFLempTL2hxWGFGN0JYSlR5ZXc0Z1MrRkFhbWlzSFMySTZRVXpkUWdkYTRnT3JNSXEzdVBwZWVSVmc9PTsyMDI0LTA5LTI2VDEzOjIxOjE5LjAyMzQwMDhaOzM4Z0lpTFdXNzhIRURwT00xVWhiaHc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjozfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MGUxYzExZC00MjJjLTQyNjctYTA5NC04ZjQ4NGE3YmIzNmQifQ&amp;p=B2C_1A_signup_signin_Test">Reset your password</a>
+                          </div>
+          <div class="error itemLevel" aria-hidden="true" style="display: none;">
+            <p role="alert"></p>
+          </div>
+          <input type="password" id="password" name="Your password" placeholder="Your password" aria-label="Your password" autocomplete="current-password" aria-required="true"><div><input type="checkbox" id="passwordtoggler"><label for="passwordtoggler" class="show-password-label">Show password</label></div>
+                      </div>
+      <div class="working"></div>
+          <div class="rememberMe">
+            <input id="rememberMe" type="checkbox" name="rememberMe">
+            <label for="rememberMe">Remember me</label>
+          </div>
+
+
+      <div class="buttons">
+        <button id="next" type="submit" form="localAccountForm">Login</button>
+      </div>
+    </div>
+          <div class="divider">
+            <h2>OR</h2>
+          </div>
+          <div class="create">
+            <p>
+              <a id="createAccount" href="/3d6eba18-c7b2-41e3-98f3-13e7e9b194a8/B2C_1A_signup_signin_Test/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=cGpNK0VDS0RoWjQrNzY3RzBmakdEbWh2eG1oNTFLempTL2hxWGFGN0JYSlR5ZXc0Z1MrRkFhbWlzSFMySTZRVXpkUWdkYTRnT3JNSXEzdVBwZWVSVmc9PTsyMDI0LTA5LTI2VDEzOjIxOjE5LjAyMzQwMDhaOzM4Z0lpTFdXNzhIRURwT00xVWhiaHc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjozfQ==&amp;tx=StateProperties=eyJUSUQiOiI3MGUxYzExZC00MjJjLTQyNjctYTA5NC04ZjQ4NGE3YmIzNmQifQ&amp;p=B2C_1A_signup_signin_Test">Sign up</a> for an account
+            </p>
+          </div>
+  </form>
+</div>
+                </div>
+                <div class="login-area">
+                  <h1>Log in to Our thinking</h1>
+                </div>
+                <div class="login-footer">
+                    <div class="login-copy login-mb-10">For technical support, contact support@engage.hoganlovells.com
+                        <br>This site is
+                        best experienced in
+                        Chrome.</div>
+                    <div class="login-copy">© 2024 Hogan Lovells | Terms of use</div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </body>
