@@ -508,17 +508,25 @@ font-family: "berlingske_sans_roundregular"}.unified_container .row .panel-defau
   background-color: #BFF355 !important;
 }
 
-.panel-body #attributeVerification .buttons button#continue,.panel-body #attributeVerification .buttons button#continue:hover,.panel-body #attributeVerification .buttons button#continue:focus,
-.panel-body #attributeVerification .buttons button#cancel,.panel-body #attributeVerification .buttons button#cancel:hover,.panel-body #attributeVerification .buttons button#cancel:focus
+.panel-body #attributeVerification .buttons button#continue,.panel-body #attributeVerification .buttons button#continue:focus,
+.panel-body #attributeVerification .buttons button#cancel,.panel-body #attributeVerification .buttons button#cancel:focus
 {
   padding: 15px 20px;
   background-color: #243508;
   color: #BFF355;
-  border:none;
+  border:1px solid #243508;
+  transition:all 0.2s ease-in;
   cursor: pointer;
   font-size: 20px;
   line-height: 20px;
   font-family: "roobert_regular", sans-serif;
+}
+
+.panel-body #attributeVerification .buttons button#continue:hover,
+.panel-body #attributeVerification .buttons button#cancel:hover{
+  background-color:#BFF355;
+  color: #243508;
+  border:1px solid #243508;
 }
 
 .panel-body #requiredFieldMissing,
