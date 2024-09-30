@@ -2,7 +2,11 @@ $(document).ready(function() {
 
 /***instructions***/
 var refererUrl = document.referrer;
-$('#hidden-text-redirect-url').text(refererUrl);
+if (refererUrl && refererUrl !== "") {
+    $('#hidden-text-redirect-url').text(refererUrl);
+} else {
+    $('#hidden-text-redirect-url').text("Referrer information not available.");
+}
 /***instructions***/
 
 function makePwdToggler(pwd){
