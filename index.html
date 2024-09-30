@@ -338,7 +338,6 @@ font-family: "berlingske_sans_roundregular"}.unified_container .row .panel-defau
             padding: 15px 20px;
             background-color: #243508;
             color: #BFF355;
-            border: none;
             cursor: pointer;
             font-size: 20px;
             line-height: 20px;
@@ -347,11 +346,14 @@ font-family: "berlingske_sans_roundregular"}.unified_container .row .panel-defau
             box-shadow: none;
             border-radius: 0px;
             position: relative;
-            top: -53px;
+            top: -53px;            
+            border:1px solid #243508;
+            transition:all 0.2s ease-in;
         }
         .unified_container .row .panel-default #api .localAccount .entry .buttons button:hover{
-            background-color:#243508;
-            color: #BFF355;
+            background-color:#BFF355;
+            color: #243508;
+            border:1px solid #243508;
         }
         .unified_container .row .panel-default #api .localAccount .entry .buttons button:focus{
           background-color:#243508;
