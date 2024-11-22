@@ -5,7 +5,7 @@
     
     <title>Sign up or sign in</title>
 
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -201,13 +201,26 @@
         font-size: 20px; /* Adjust as necessary */
         color: white;
     }
+
     .rememberMe label{
-      font-size:20px;
-      line-height:20px;
+      font-size:12px;
+      line-height:25px;
       color:#243508;
       font-family: "roobert_regular",sans-serif;
       font-weight:normal;
     }
+    
+
+    @media(min-width:420px)
+    {
+      .rememberMe label{
+        font-size:20px;
+        line-height:20px;
+      }
+    }
+
+    
+
     /* Show the checkmark/indicator when the checkbox is checked */
     input[type="checkbox"]:checked::before {
         display: block;
